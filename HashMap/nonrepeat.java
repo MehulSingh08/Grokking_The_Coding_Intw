@@ -1,7 +1,7 @@
 import java.util.*;
 public class nonrepeat
 {
-    public static Character nrc(String s)
+    public static Character nrc(String s, int k)
     {
         Map<Character, Integer> hash = new LinkedHashMap<>();
 
@@ -17,10 +17,13 @@ public class nonrepeat
             }
         }
 
+        int count = 0;
         for(Map.Entry<Character, Integer> entry : hash.entrySet())
         {
             if(entry.getValue() == 1)
             {
+                count++;
+                if(count == k)
                 return entry.getKey();
             }
         }
@@ -33,11 +36,12 @@ public class nonrepeat
     {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        Character result = nrc(s);
+        int k = sc.nextInt();
+        Character result = nrc(s,k);
         System.out.println(result);
         if (result != null) 
         {
-            System.out.println("First non-repeating character: " + result);
+            System.out.println(k+"th non-repeating character: " + result);
         } //it wpuld always return some non zero value if there are nrc
         else 
         {
