@@ -38,11 +38,18 @@ public class nonrepeat
         String s = sc.nextLine();
         int k = sc.nextInt();
         Character result = nrc(s,k);
-        System.out.println(result);
         if (result != null) 
         {
+            if(k==1)
+            System.out.println(k+"st non-repeating character: " + result);
+            else if(k==2)
+            System.out.println(k+"nd non-repeating character: " + result);
+            else if(k==3)
+            System.out.println(k+"rd non-repeating character: " + result);
+            else
             System.out.println(k+"th non-repeating character: " + result);
-        } //it wpuld always return some non zero value if there are nrc
+
+        } //it would always return some non zero value if there are nrc
         else 
         {
             System.out.println("No non-repeating character found.");
