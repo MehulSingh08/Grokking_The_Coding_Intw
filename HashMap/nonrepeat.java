@@ -34,11 +34,14 @@ public class nonrepeat
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         Character result = nrc(s);
-       // System.out.println(result);
-        if (result != null) {
+        System.out.println(result);
+        if (result != null) 
+        {
             System.out.println("First non-repeating character: " + result);
-        } else {
+        } //it wpuld always return some non zero value if there are nrc
+        else 
+        {
             System.out.println("No non-repeating character found.");
-        }
+        } // for the edge cases like aabb etc
     }
 }
