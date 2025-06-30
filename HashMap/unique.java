@@ -1,3 +1,5 @@
+package HashMap;
+
 import java.util.*;
 public class unique
 {
@@ -42,6 +44,6 @@ public class unique
             arr[i] = sc.nextInt();
         }
         int result = Unumber(arr);
-        System.out.println(result);
+        System.out.println("Unique number is: " +result);
     }
 }
